@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+	{% load md2 %}
+
+    <h3>Topic: {{ entry.subject }} </h3>
+	<br>
+    <h5> Content in converted html:</h5>
+    	{{ entry.content|markdown:"safe" }}    
+	<br><br>
+    	<h5> Content in raw markdown:</h5>
+    	{{ entry.content }}
+	<br>
+    
+ <a href="{% url 'entry_update' entry.id %}">Edit this entry.</a>
+ 
+{% endblock %}

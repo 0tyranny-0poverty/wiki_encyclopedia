@@ -1,0 +1,3 @@
+is an [open-source](https://en.wikipedia.org/wiki/Open-source "Open-source")  [JavaScript library](https://en.wikipedia.org/wiki/JavaScript_library "JavaScript library")[[3]](https://en.wikipedia.org/wiki/React_(web_framework)#cite_note-react-3) for building [user interfaces](https://en.wikipedia.org/wiki/User_interfaces "User interfaces") or UI components.
+
+React can be used as a base in the development of single-page or mobile applications.  However, React is only concerned with rendering data to the [DOM](https://en.wikipedia.org/wiki/Document_Object_Model "Document Object Model"). Other libraries would be needed for typicall desired functionality.

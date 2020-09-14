@@ -1,0 +1,27 @@
+ {% extends "layout.html" %}
+
+{% block content %}  
+{% if entries or contents %}
+      	<p>Topic Search Results for "{{ searchtoken }}" .
+      <ul>
+        {% for each_searchresult in entries %}
+      <li>
+        <a href="{{ each_searchresult.get_absolute_url }}">{{ each_searchresult.subject }}</a> 
+      </li>
+    {% endfor %}
+  </ul>
+<br>
+        <p>Content Search Results for "{{ searchtoken }}" .
+      <ul>
+        {% for each_searchresult in contents %}
+      <li>
+        <a href="{{ each_searchresult.get_absolute_url }}">{{ each_searchresult.subject }}</a> 
+      </li>
+    {% endfor %}
+  </ul>  
+{% else %}
+    <p>There are no matches for "{{ searchtoken }}" .</p>
+  {% endif %} 
+  <br>      
+  <a href="{% url 'entry_create' %}">Add new wiki entry to wiki encyclopedia.</a>
+  {% endblock %}
